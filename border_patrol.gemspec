@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
+require 'appmap'
 require 'border_patrol/version'
 
 Gem::Specification.new do |s|
