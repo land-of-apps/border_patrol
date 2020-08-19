@@ -18,9 +18,12 @@ Gem::Specification.new do |s|
   s.test_files = `git ls-files -- spec/*`.split("\n")
 
   s.add_dependency("nokogiri", ">= 1.4.3.1")
-
   s.add_development_dependency("rake")
-  s.add_development_dependency("rspec", "~> 2.6.0")
+  s.add_development_dependency("appmap")
+ 
+  # this version requires rspec v2.6.0, but APPMAP cannot handle rspec v2
+  # comment out and use current rspec, leads to a few failed tests
 
-  s.dd_development_dependency("appmap")
+  s.add_development_dependency("rspec")
+  #s.add_development_dependency("rspec", "~> 2.6.0")
 end
